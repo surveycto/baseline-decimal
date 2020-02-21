@@ -1,0 +1,8 @@
+{
+	"name" : "Baseline decimal field",
+	"author" : "Dobility",
+	"version": "3.0.1",
+	"supportedFieldTypes": ["decimal"],
+	"hideDefaultRequiredMessage": false,
+	"hideDefaultConstraintMessage": false
+}
