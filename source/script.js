@@ -1,3 +1,8 @@
+// Detect platform
+var isWebCollect = (document.body.className.indexOf("web-collect") >= 0);
+var isAndroid = (document.body.className.indexOf("android-collect") >= 0);
+var isIOS = (document.body.className.indexOf("ios-collect") >= 0);
+
 // Find the input element
 var input = document.getElementById('decimal-field');
 
@@ -36,6 +41,42 @@ function isEmptyDecimal(value) {
 
 // If the field is not marked readonly, then restrict input to decimal only.
 if(!fieldProperties.READONLY) {
+
+    // Set/remove the "inputmode".
+    function setInputMode(attributeValue) {
+        if (attributeValue === null) {
+            input.removeAttribute("inputmode");
+        } else {
+            input.setAttribute("inputmode", attributeValue);
+        }
+    }
+
+    // For iOS, we'll default the inputmode to "numeric", unless some specific value is
+    // passed as plug-in parameter.
+    if (isIOS) {
+        var inputModeIOS = getPluginParameter("inputmode-ios");
+        if (inputModeIOS === undefined) {
+            inputModeIOS = "numeric";
+        }
+        setInputMode(inputModeIOS);
+    }
+    // For Android, we'll default the inputmode to "decimal" (as defined in the template.html) file,
+    // unless some specific value is passed as plug-in parameter.
+    else if (isAndroid) {
+        var inputModeAndroid = getPluginParameter("inputmode-android");
+        if (inputModeAndroid !== undefined) {
+            setInputMode(inputModeAndroid);
+        }
+    }
+    // For WebCollect, we'll default the inputmode to "decimal" (as defined in the template.html) file,
+    // unless some specific value is passed as plug-in parameter.
+    else if (isWebCollect) {
+        var inputModeWebCollect = getPluginParameter("inputmode-web");
+        if (inputModeWebCollect !== undefined) {
+            setInputMode(inputModeWebCollect);
+        }
+    }
+
     setInputFilter(input, function (value) {
         // Empty value.
         if (isEmptyDecimal(value)) {
