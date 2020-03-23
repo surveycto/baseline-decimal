@@ -1,5 +1,7 @@
 # Baseline decimal field
 
+![](extras/baseline-decimal.jpg)
+
 ## Description
 
 A baseline replacement for the default decimal field. Use this as a starting template when creating your own decimal field plug-in.
