@@ -6,6 +6,8 @@
 
 A baseline replacement for the default decimal field. Use this as a starting template when creating your own decimal field plug-in.
 
+[![Download now](extras/download-button.png)](https://github.com/surveycto/baseline-decimal/raw/master/baseline-decimal.fieldplugin.zip)
+
 ## Default SurveyCTO feature support
 
 | Feature / Property | Support |
