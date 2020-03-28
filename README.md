@@ -22,6 +22,13 @@ A baseline replacement for the default decimal field. Use this as a starting tem
 | media:video | Yes |
 | `show-formatted` appearance | No |
 
+## Expanded feature support
+
+In addition to supporting the default SurveyCTO features listed above, this field plug-in offers the following expanded functionality:
+
+1. Support for HTML in field references  
+    If you reference another field's value in either the field *label* or field *hint*, and that referenced value contains HTML, the HTML will be correctly rendered.
+
 **Note about the keyboard on iOS:**  
 iOS has a less-consistent way of determining which on-screen keyboard to display than Android. If you plan on using this plug-in on iOS, you should test your form on the actual iOS device that you plan on using. If the wrong keyboard appears (for example, if there is no minus button available), you may supply an optional parameter to the plug-in to set the keyboard type manually. 
 
