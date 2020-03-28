@@ -4,7 +4,7 @@
 
 ## Description
 
-A baseline replacement for the default decimal field. Use this as a starting template when creating your own decimal field plug-in.
+A simple replacement for the default decimal field, plus a few improvements (see below). You can either download and use this as-is, or you can use it as a starting template when creating your own field plug-in for a decimal field.
 
 [![Download now](extras/download-button.png)](https://github.com/surveycto/baseline-decimal/raw/master/baseline-decimal.fieldplugin.zip)
 
