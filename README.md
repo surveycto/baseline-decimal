@@ -26,6 +26,8 @@ A simple replacement for the default decimal field, plus a few improvements (see
 
 In addition to supporting the default SurveyCTO features listed above, this field plug-in offers the following expanded functionality:
 
+1. Support for RTL languages  
+    If your *label* or *hint* is in a language that uses a right-to-left alphabet (like Arabic), it will be right-justified.
 1. Support for HTML in field references  
     If you reference another field's value in either the field *label* or field *hint*, and that referenced value contains HTML, the HTML will be correctly rendered.
 
