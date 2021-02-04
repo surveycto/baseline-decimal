@@ -48,6 +48,11 @@
     value="{{CURRENT_ANSWER}}" 
     id="decimal-field" 
     class="response default-answer-text-size"
-    placeholder="{{QUESTION_PLACEHOLDER_LABEL}}" 
+    {{#QUESTION_PLACEHOLDER_LABEL}}
+      placeholder="{{QUESTION_PLACEHOLDER_LABEL}}"
+    {{/QUESTION_PLACEHOLDER_LABEL}}
+    {{^QUESTION_PLACEHOLDER_LABEL}}
+      placeholder="Your answer here..."
+    {{/QUESTION_PLACEHOLDER_LABEL}} 
 />
 {{/READONLY}}
